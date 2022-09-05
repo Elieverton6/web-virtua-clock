@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --corPadrao: rgb(52, 206, 32);
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+.relogio-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    transition: all 0.3s;
+    width: 100%;
+    text-align: center;
+    background-color: var(--corPadrao);
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+.box i {
+    margin: 0 0.5rem;
+}
+
+.box:hover {
+    -webkit-box-shadow: 0px 0px 32px -2px #39ff074f;
+    -moz-box-shadow: 0px 0px 32px -2px #39ff074f;
+    box-shadow: 0px 0px 32px -2px #39ff074f;
+    transform: scale(1.050);
+    background-color: rgb(57, 255, 57);
+}
+
+@media only screen and (max-width: 470px){
+    .relogio-container {
+        position: static;
+        transform: none;
+    }
+
+    .box {
+        margin: 2vw auto;
+        width: 90%;
+    }
+}
